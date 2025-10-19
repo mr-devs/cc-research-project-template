@@ -1,0 +1,12 @@
+# Main Snakefile for research project workflow
+# This file orchestrates the research project pipeline
+
+# Include subworkflows
+include: "collect/Snakefile"
+include: "analyze/Snakefile"
+
+# Default rule
+rule all:
+    input:
+        # Define your final output files here
+        pass
