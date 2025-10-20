@@ -1,4 +1,4 @@
-# Lib Package
+# Toolkit Package
 
 Core package modules containing reusable utility functions, data models, and metrics for the project.
 
