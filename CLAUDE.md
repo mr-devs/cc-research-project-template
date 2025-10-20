@@ -94,7 +94,7 @@ code/
   generate_figures/  # Plot & visualization scripts
   generate_tables/   # Table generation scripts (e.g. latex)
   generate_reports/  # Scripts generating simply .txt statistics reports
-  lib/               # Reusable modules
+  toolkit/           # Local module with project-specific code
   misc/              # Anything that doesn't fit clearly in other directories
   notebooks/         # Exploratory notebooks
   tests/             # Unit tests & validation

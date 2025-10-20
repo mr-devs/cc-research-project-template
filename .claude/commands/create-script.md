@@ -59,7 +59,7 @@ Your goal is to create a new Python script that follows the project's coding sta
    - Search the directory where the new script will be saved for existing scripts
    - Look for similar functionality or shared logic across scripts
    - If you find repeated code patterns or utility functions:
-     - Refactor them into the `lib/` directory as reusable modules
+     - Refactor them into the `toolkit/` directory as reusable modules
      - Import these functions in both the new script and existing scripts
      - Update the existing scripts to use the refactored library functions
    - This keeps the codebase maintainable and prevents duplication
@@ -77,7 +77,7 @@ Your goal is to create a new Python script that follows the project's coding sta
 
 6. After creating the script:
    - Explain what you created and where it was saved
-   - Note any code that was refactored into `lib/` (if applicable)
+   - Note any code that was refactored into `toolkit/` (if applicable)
    - Note any assumptions you made and potential "gotchas"
    - Suggest next steps (e.g., testing, data collection)
 
@@ -92,5 +92,5 @@ Your goal is to create a new Python script that follows the project's coding sta
 - [ ] `main()` function orchestrates workflow
 - [ ] Code prioritizes readability and reproducibility
 - [ ] Assumptions and decisions are documented in comments
-- [ ] Checked for duplicate code; refactored shared logic to `lib/` if needed
+- [ ] Checked for duplicate code; refactored shared logic to `toolkit/` if needed
 - [ ] Directory README.md updated to include the new script

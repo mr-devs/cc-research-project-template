@@ -8,9 +8,9 @@ Notes:
     if there are no notable implementation details or assumptions to document.]
 
     DRY Principle (Don't Repeat Yourself):
-    - If functionality is shared across multiple scripts, refactor it into the `lib/` directory
+    - If functionality is shared across multiple scripts, refactor it into the `toolkit/` directory
     - Import shared functions rather than duplicating code
-    - Keep script-specific logic here; move reusable utilities to `lib/`
+    - Keep script-specific logic here; move reusable utilities to `toolkit/`
 
 Input:
     - [List input files, command-line flags, data sources, etc.]
@@ -33,7 +33,7 @@ from pathlib import Path
 # import numpy as np
 
 # Local imports
-# from lib.utils import custom_function
+# from toolkit.utils import custom_function
 
 # Change to script directory to enable relative paths
 os.chdir(Path(__file__).resolve().parent)

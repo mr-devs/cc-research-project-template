@@ -1,13 +1,13 @@
-# Lib
+# Toolkit
 
-This directory contains shared utility functions and helper libraries used across multiple scripts.
-Library code promotes code reuse and maintains consistency across the project.
+This directory contains the local project module with shared utility functions and project-specific code used across multiple scripts.
+This promotes code reuse and maintains consistency across the project.
 
 ## Contents
 
 - `pyproject.toml`: Modern Python packaging configuration (PEP 517/518 compliant)
 - `setup.py`: Legacy setup script (retained for backwards compatibility)
-- `lib/`: Package directory containing reusable modules for the project
+- `toolkit/`: Package directory containing reusable modules for the project
 
 ## Installation
 

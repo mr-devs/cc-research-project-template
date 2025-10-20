@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Setup script for the llm_search package.
+Setup script for the toolkit package.
 """
 
 from setuptools import setup, find_packages
 
 setup(
-    name="lib",
+    name="toolkit",
     version="0.1.0",
     author="PROJECT CONTRIBUTORS",
     description="Core functionality for [project team name/description]",

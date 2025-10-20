@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toolkit"
+version = "0.1.0"
+description = "Core functionality for [project team name/description]"
+authors = [
+    {name = "PROJECT CONTRIBUTORS"}
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.setuptools]
+packages = ["toolkit"]

@@ -9,7 +9,7 @@ Code is organized into subdirectories by function to maintain clean separation o
 - `cleaning/`: Data cleaning and preprocessing scripts
 - `data_collection/`: Scripts for gathering and downloading data from various sources
 - `generate_figures/`: Scripts for creating visualizations and plots
-- `lib/`: Shared utility functions and helper libraries used across multiple scripts
+- `toolkit/`: Local module with project-specific code used across multiple scripts
 - `misc/`: Miscellaneous scripts that don't fit into other categories
 - `notebooks/`: Jupyter notebooks for exploratory analysis and documentation
 - `tests/`: Unit tests and integration tests for code validation
