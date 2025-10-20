@@ -12,7 +12,7 @@ If nothing is included in the "Directories" section below, then you should use t
 ## Guidance
 
 1. Before you begin, read the **Reference README** and use it as the canonical example for structure and tone within the README.md files that you edit or create:
-   - **Reference README**: @/.claude/reference/reference-readme.md
+   - **Reference README**: @.claude/reference/reference-readme.md
 2. Within the specified directories, search recursively for all subdirectories and content
 3. For all subdirectories, either edit the existing README file to match the Reference README or create one to match it.
 4. Edits should be made for the following reasons:
