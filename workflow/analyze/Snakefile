@@ -1,6 +1,3 @@
 # Snakefile for data analysis workflow
 
-# Load configuration
-configfile: "config.yaml"
-
 # Add your analysis rules here
