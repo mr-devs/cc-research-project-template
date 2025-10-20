@@ -92,6 +92,8 @@ code/
   cleaning/          # Data preprocessing scripts
   data_collection/   # Data gathering scripts
   generate_figures/  # Plot & visualization scripts
+  generate_tables/   # Table generation scripts (e.g. latex)
+  generate_reports/  # Scripts generating simply .txt statistics reports
   lib/               # Reusable modules
   misc/              # Anything that doesn't fit clearly in other directories
   notebooks/         # Exploratory notebooks
@@ -108,13 +110,16 @@ data/
 results/
   figures/           # Publication‑ready plots
   tables/            # Formatted results
+  reports/           # Simple .txt reports of statistics
 
 workflow/
-  Snakefile          # Optional master dispatcher (includes collect and analyze)
-  collect/           # Daily data collection pipeline
-    Snakefile        # Snakemake workflow for data gathering
-    config.yaml      # Config file with daily parameters (e.g. dates or IDs)
-  analyze/           # Post-collection analysis pipeline
-    Snakefile        # Snakemake workflow for cleaning, modeling, and plotting
-    config.yaml      # Config file for controlling downstream analysis
+  Snakefile          # Optional orchestration file that coordinates the below pipelines
+  analyze/           # Analysis pipeline
+    Snakefile        # Snakemake workflow for analysis
+  clean/             # Data cleaning pipeline
+    Snakefile        # Snakemake workflow for cleaning data
+  collect/           # Data collection pipeline
+    Snakefile        # Snakemake workflow for collecting data
+  visualize/         # Figure generation pipeline
+    Snakefile        # Snakemake workflow for creating final visualizations
 ```
