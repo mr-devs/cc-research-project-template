@@ -5,7 +5,8 @@ Library code promotes code reuse and maintains consistency across the project.
 
 ## Contents
 
-- `setup.py`: Setup script for installing the lib package in development mode
+- `pyproject.toml`: Modern Python packaging configuration (PEP 517/518 compliant)
+- `setup.py`: Legacy setup script (retained for backwards compatibility)
 - `lib/`: Package directory containing reusable modules for the project
 
 ## Installation
@@ -15,3 +16,5 @@ To install the package in development mode (editable install), navigate to this 
 ```bash
 pip install -e .
 ```
+
+This will work with both the modern `pyproject.toml` and legacy `setup.py` configurations.
