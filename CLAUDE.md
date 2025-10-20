@@ -11,7 +11,7 @@ This means that we will document assumptions and rationale for data collection, 
 
 ## 2. Coding & Documentation Standards
 
-### 2.1  Python Script Header
+### 2.1a  Python Script Header
 
 ```python
 """
@@ -30,6 +30,20 @@ Output:
 
 Author: Matthew DeVerna
 """
+```
+
+### 2.1b  Python Module Header
+
+Include only a brief description of the module purpose.
+For example, a module file called `utils.py` might look like this.
+
+```python
+"""
+Convenience utility functions are saved here.
+"""
+
+# Imports ...
+# Functions ...
 ```
 
 ### 2.2  Script Organization
