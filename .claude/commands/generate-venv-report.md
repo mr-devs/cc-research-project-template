@@ -37,7 +37,7 @@ Create two files in the **project root**:
    - In `temp-software.txt` under **High-level pipeline**, list:
      - Main entry scripts/workflows.
      - Typical invocation commands (e.g., `snakemake -j`, `bash run_all.sh`).
-   - Only code reachable from these entry points is considered **in-scope** for `requirements.txt`.
+   - Only code reachable from these entry points is considered **in-scope** for `requirements.txt`. 
 
 3. **Inspect the active Python environment (for versions)**
 
