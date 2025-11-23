@@ -24,21 +24,20 @@ Output:
 Author: Matthew DeVerna
 """
 
-# Standard library imports
+# Standard library imports are included first
 import os
 from pathlib import Path
 
-# Third-party imports
+# Third-party imports are included next
 # import pandas as pd
 # import numpy as np
 
-# Local imports
+# Local imports are included next
 # from toolkit.utils import custom_function
 
 # Change to script directory to enable relative paths
 os.chdir(Path(__file__).resolve().parent)
 
-# CONSTANTS
 # Define constants here in UPPERCASE
 # INPUT_FILE = Path("../data/raw/input.csv")
 # OUTPUT_DIR = Path("../results/tables")
@@ -99,16 +98,12 @@ def main():
     3. Analyzing results
     4. Saving outputs
     """
-    # Step 1: Load data
     # data = load_data()
 
-    # Step 2: Process data
     # processed_data = example_processing_function(data, param)
 
-    # Step 3: Analyze results
     # results = example_analysis_function(processed_data)
 
-    # Step 4: Save outputs
     # results.to_csv(OUTPUT_FILE, index=False)
 
     pass

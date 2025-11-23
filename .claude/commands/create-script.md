@@ -1,6 +1,6 @@
 ---
 description: Create a new Python script following project best practices. $ARGUMENTS
-argument-hint: [Description of what the script should do]
+argument-hint: [Description of what the script should do.]
 ---
 
 # Task
@@ -16,7 +16,7 @@ Your goal is to create a new Python script that follows the project's coding sta
 
 1. Before you begin, do these two things:
 
-   - Read the **Reference Script** to understand the canonical template and structure:
+   - Read the **Reference Script** and **Project Standards** to understand the canonical template and structure:
 
      - **Reference Script**: @.claude/reference/reference-script.py
      - **Project Standards**: @CLAUDE.md

@@ -17,4 +17,4 @@ Other important information is briefly described here.
 Things that meet the standard of "important information" are things like:
 
 - Instructions on how to set up a virtual environment, if in a directory dedicated to a virtual environment
-- Instructions on how to install a local package in the `lib/` directory
+- Instructions on how to install a local package in the `toolkit/` directory
