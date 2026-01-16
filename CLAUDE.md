@@ -123,3 +123,21 @@ workflow/
   visualize/         # Figure generation pipeline
     Snakefile        # Snakemake workflow for creating final visualizations
 ```
+
+## 4  Virtual Environment Management
+
+Use [uv](https://docs.astral.sh/uv/) to manage Python virtual environments.
+
+```bash
+# Create a new virtual environment
+uv venv
+
+# Activate the environment
+source .venv/bin/activate
+
+# Install packages
+uv pip install <package>
+
+# Install from requirements file
+uv pip install -r requirements.txt
+```
