@@ -3,7 +3,8 @@
 High-level next steps that the reader of this report should take:
 
 - [example] Confirm the Python version and document it in the project root `README.md`.
-- [example] Maintain a minimal `requirements.txt` with only core pipeline dependencies.
+- [example] Ensure `pyproject.toml` and `uv.lock` are committed to the repository as the source of truth for dependencies.
+- [example] Add instructions in the project root `README.md` for replicating the environment with `uv venv && uv sync`.
 - [example] Add instructions in the project root `README.md` for installing any local project packages.
 - [example] Add brief notes in the project root `README.md` about other required software (e.g., Snakemake, R, system tools).
 
@@ -18,13 +19,14 @@ This project is currently using Python version: `X.XX`.
 ### Next steps
 
 1. Document this Python version in the project root `README.md`.
-2. Optionally add a short note about how to install or manage this Python version (e.g., `pyenv`, Conda, system package manager).
+2. Optionally add a short note about how to install or manage this Python version (e.g., `pyenv`, system package manager).
 
 ---
 
-## Python `requirements.txt` file
+## Python dependencies
 
-This project leverages **N** third-party Python packages that need to be installed to run the **core replication pipeline**:
+This project leverages **N** third-party Python packages that need to be installed to run the **core replication pipeline**.
+Dependencies are declared in `pyproject.toml` and pinned in `uv.lock` — these files are the source of truth.
 
 - Third-party pipeline packages:
   1. `package_1==1.97.1`
@@ -34,10 +36,10 @@ This project leverages **N** third-party Python packages that need to be install
 
 ### Next steps
 
-1. Ensure a minimal `requirements.txt` exists in the project root directory containing only these core pipeline packages.
-2. In the project root `README.md`, add instructions for:
-   - Creating a virtual environment.
-   - Installing dependencies via `pip install -r requirements.txt`.
+1. Ensure `pyproject.toml` and `uv.lock` are committed to the repository.
+2. In the project root `README.md`, add instructions for replicating the environment:
+   - Create a virtual environment: `uv venv`
+   - Install all dependencies: `uv sync`
 
 ---
 
@@ -51,8 +53,8 @@ This project leverages **M** local packages used in the core pipeline:
 
 ### Next steps
 
-1. In the project root `README.md`, add clear instructions for installing any local packages (e.g., `pip install -e .` or `pip install -e src/`).
-2. Place these instructions after the virtual environment and `requirements.txt` setup steps.
+1. In the project root `README.md`, add clear instructions for installing any local packages (e.g., `uv pip install -e .` or `uv pip install -e src/`).
+2. Place these instructions after the virtual environment and dependency setup steps.
 
 ---
 

@@ -1,6 +1,8 @@
 ---
+name: readme-clean
 description: Clean README.md files in the entire repository or specified directories. $ARGUMENTS
 argument-hint: [Include path(s) to clean]
+disable-model-invocation: true
 ---
 
 # Task

@@ -127,17 +127,25 @@ workflow/
 ## 4  Virtual Environment Management
 
 Use [uv](https://docs.astral.sh/uv/) to manage Python virtual environments.
+Dependencies are tracked in `pyproject.toml` and pinned in `uv.lock`.
+Do **not** use `uv pip install` for adding packages — use `uv add` so that dependencies are recorded in `pyproject.toml`.
 
 ```bash
-# Create a new virtual environment
+# Initialize a new project (creates pyproject.toml)
+uv init
+
+# Create a virtual environment
 uv venv
 
 # Activate the environment
 source .venv/bin/activate
 
-# Install packages
-uv pip install <package>
+# Add a package (records it in pyproject.toml and updates uv.lock)
+uv add <package>
 
-# Install from requirements file
-uv pip install -r requirements.txt
+# Replicate the environment from pyproject.toml / uv.lock
+uv sync
+
+# Install a local package in editable mode (e.g., the toolkit/)
+uv pip install -e .
 ```

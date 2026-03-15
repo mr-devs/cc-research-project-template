@@ -1,6 +1,8 @@
 ---
+name: create-script
 description: Create a new Python script following project best practices. $ARGUMENTS
 argument-hint: [Description of what the script should do.]
+disable-model-invocation: true
 ---
 
 # Task
@@ -18,7 +20,7 @@ Your goal is to create a new Python script that follows the project's coding sta
 
    - Read the **Reference Script** and **Project Standards** to understand the canonical template and structure:
 
-     - **Reference Script**: @.claude/reference/reference-script.py
+     - **Reference Script**: @.claude/skills/create-script/reference-script.py
      - **Project Standards**: @CLAUDE.md
 
    - Reference anything else mentioned by the user in the "Script Description" section so that you have full context before moving forward
@@ -66,7 +68,7 @@ Your goal is to create a new Python script that follows the project's coding sta
 
 4. Once you have clarity, create the script prioritizing **clarity over speed**.
 
-   - Remember to base the file on @.claude/reference/reference-script.py template and structure
+   - Remember to base the file on @.claude/skills/create-script/reference-script.py template and structure
 
 5. **Update the directory README**:
 
