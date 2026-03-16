@@ -51,7 +51,7 @@ fbib --help
 ## The Coding & Analysis Pipeline
 
 1. **Set up the environment**: Run `uv venv && source .venv/bin/activate && uv sync`. Add packages with `uv add <package>` so dependencies are tracked in `pyproject.toml`.
-2. **Create scripts**: `/create-script` — Guides you through creating a new script in the appropriate `code/` subdirectory, pre-populated with the project-standard header and a `main()` stub. Structure based on `.claude/skills/create-script/reference-script.py`, alter for your own preferences.
+2. **Create scripts**: `/create-script` — Guides you through creating a new script in the appropriate `code/` subdirectory, pre-populated with the project-standard header and a `main()` stub. Structure based on [`.claude/skills/create-script/reference-script.py`](../../.claude/skills/create-script/reference-script.py), alter for your own preferences.
 3. **Run analyses**: Conduct your study/analyses and generate figures/tables for the paper. Save figures to `results/figures/`, generate LaTeX tables to `results/tables/`, and other statistical reports in `results/reports/`. For complex, multi-step pipelines, use the Snakemake workflows in `workflow/` to orchestrate execution.
 4. **Integrate results into the paper**: Use `/write-paper` to draft sections from your outline, pointing it to the relevant scripts, reports, and figures.
 5. **Prepare for publication**: `/generate-venv-report` — Documents all installed packages and versions to ensure the environment is reproducible.
@@ -81,9 +81,9 @@ The following steps take you from raw PDF files to a compiled LaTeX manuscript:
    - For Introduction and Discussion sections, uses paper summaries for citation context.
    - For Results and Methods sections, reads artifact files listed in the outline (reports, scripts, data); if none are listed, prompts you to provide them.
    - Writing style is governed by three reference files:
-     - `.claude/reference/venue-info.md` — venue structure and section guidance
-     - `.claude/reference/writing-style.md` — sentence-level style, derived from [Gopen & Swan, 1990](https://www.usenix.org/sites/default/files/gopen_and_swan_science_of_scientific_writing.pdf)
-     - `.claude/reference/latex-rules.md` — LaTeX formatting rules
+     - [`.claude/reference/venue-info.md`](../../.claude/reference/venue-info.md) — venue structure and section guidance
+     - [`.claude/reference/writing-style.md`](../../.claude/reference/writing-style.md) — sentence-level style, derived from [Gopen & Swan, 1990](https://www.usenix.org/sites/default/files/gopen_and_swan_science_of_scientific_writing.pdf)
+     - [`.claude/reference/latex-rules.md`](../../.claude/reference/latex-rules.md) — LaTeX formatting rules
 
 ## Where to Go Next
 
