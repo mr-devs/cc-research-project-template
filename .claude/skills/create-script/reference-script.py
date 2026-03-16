@@ -1,3 +1,8 @@
+# Template note: Before creating the script, check for shared logic across existing scripts.
+# If reusable patterns are found, flag them to the user and propose extracting to `toolkit/`.
+# Do NOT modify existing scripts without explicit user approval.
+# This comment is guidance for Claude — do not include it in the generated script.
+
 """
 Purpose:
     [Brief description of what this script does]
@@ -6,11 +11,6 @@ Notes:
     [Include details about how the script works, assumptions/decisions made so that
     independent reviewers can understand how analyses were done. Remove this section
     if there are no notable implementation details or assumptions to document.]
-
-    DRY Principle (Don't Repeat Yourself):
-    - If functionality is shared across multiple scripts, refactor it into the `toolkit/` directory
-    - Import shared functions rather than duplicating code
-    - Keep script-specific logic here; move reusable utilities to `toolkit/`
 
 Input:
     - [List input files, command-line flags, data sources, etc.]

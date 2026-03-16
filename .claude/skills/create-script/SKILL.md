@@ -23,6 +23,14 @@ Your goal is to create a new Python script that follows the project's coding sta
      - **Reference Script**: @.claude/skills/create-script/reference-script.py
      - **Project Standards**: @CLAUDE.md
 
+   - If the script type is already known from the description, **also read the corresponding type-specific reference file**:
+     - Data collection (`code/data_collection/`) → @.claude/skills/create-script/reference-data-collection.py
+     - Data cleaning (`code/cleaning/`) → @.claude/skills/create-script/reference-data-cleaning.py
+     - Figure generation (`code/generate_figures/`) → @.claude/skills/create-script/reference-figure-generation.py
+     - Table generation (`code/generate_tables/`) → @.claude/skills/create-script/reference-table-generation.py
+
+     If the type is unclear, read the appropriate file after Step 2 confirms the script location.
+
    - Reference anything else mentioned by the user in the "Script Description" section so that you have full context before moving forward
 
 2. Ask the user to clarify the following (if not already clear from the description):
@@ -33,6 +41,8 @@ Your goal is to create a new Python script that follows the project's coding sta
      - `code/cleaning/` for data preprocessing scripts
      - `code/analysis/` for primary analysis pipelines
      - `code/generate_figures/` for plot & visualization scripts
+     - `code/generate_tables/` for table generation scripts (LaTeX/CSV outputs)
+     - `code/generate_reports/` for simple `.txt` statistics reports
      - `code/misc/` for scripts that don't fit elsewhere
 
    - **Input Sources**: What are the inputs to this script?
@@ -61,10 +71,8 @@ Your goal is to create a new Python script that follows the project's coding sta
    - Search the directory where the new script will be saved for existing scripts
    - Look for similar functionality or shared logic across scripts
    - If you find repeated code patterns or utility functions:
-     - Refactor them into the `toolkit/` directory as reusable modules
-     - Import these functions in both the new script and existing scripts
-     - Update the existing scripts to use the refactored library functions
-   - This keeps the codebase maintainable and prevents duplication
+     - Flag the reusable pattern(s) to the user and propose extracting them to `toolkit/`
+     - Do **not** modify existing scripts without explicit user approval — only the new script is in scope unless the user agrees to broaden the work
 
 4. Once you have clarity, create the script prioritizing **clarity over speed**.
 
@@ -96,3 +104,4 @@ Your goal is to create a new Python script that follows the project's coding sta
 - [ ] Assumptions and decisions are documented in comments
 - [ ] Checked for duplicate code; refactored shared logic to `toolkit/` if needed
 - [ ] Directory README.md updated to include the new script
+- [ ] Type-specific patterns applied (e.g., logging/resume for collection, argparse for cleaning, rcParams/dual output for figures, totals row/to_latex for tables)
