@@ -17,6 +17,7 @@ $ARGUMENTS
 
 @paper/main.bib
 @paper/outline.md
+@.claude/reference/venue-info.md
 @.claude/reference/writing-style.md
 @.claude/reference/latex-rules.md
 @.claude/reference/latex-template.md
@@ -100,7 +101,7 @@ Write section header with label:
 \label{sec:concise_name}
 ```
 
-Generate prose following both @.claude/reference/writing-style.md (structure, tone, and PNAS section guidance) and @.claude/reference/latex-rules.md (citation mechanics and LaTeX formatting) for:
+Generate prose following @.claude/reference/venue-info.md (structure, tone, and PNAS section guidance), @.claude/reference/writing-style.md (sentence-level CSS style), and @.claude/reference/latex-rules.md (citation mechanics and LaTeX formatting) for:
 
 - Section structure and tone appropriate for PNAS Research Articles
 - Hedged language guidelines

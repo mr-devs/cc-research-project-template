@@ -8,7 +8,7 @@ allowed-tools: Read, Write, AskUserQuestion
 
 # Update Writing Style
 
-Interactively update `.claude/reference/writing-style.md` for a target venue or writing preference.
+Interactively update `.claude/reference/venue-info.md` for a target venue or writing preference.
 
 ## Input
 
@@ -29,14 +29,14 @@ Extract any of the following from $ARGUMENTS if present:
 
 ## Step 2: Check Existing File
 
-Check if `.claude/reference/writing-style.md` exists.
+Check if `.claude/reference/venue-info.md` exists.
 
 **If exists:** Read it, summarize current settings (venue, audience, article type, length, tone). Then ask:
 
 > "I found an existing writing style file. Would you like to replace it entirely, or update specific sections?"
 > Options: Replace entirely / Update specific sections / Let Claude decide
 
-**If not exists:** Inform user "No existing writing style found. Let's build one from scratch." Proceed to Step 3.
+**If not exists:** Inform user "No existing venue info found. Let's build one from scratch." Proceed to Step 3.
 
 ---
 
@@ -97,9 +97,9 @@ If "Start over": return to Step 3 and re-gather information.
 
 ## Step 6: Save
 
-Write the approved content to `.claude/reference/writing-style.md`.
+Write the approved content to `.claude/reference/venue-info.md`.
 
-Confirm: "Saved to `.claude/reference/writing-style.md`. `/write-paper` will now use this updated style."
+Confirm: "Saved to `.claude/reference/venue-info.md`. `/write-paper` will now use this updated venue information."
 
 ---
 
