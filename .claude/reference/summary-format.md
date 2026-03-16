@@ -54,7 +54,7 @@ Summaries go in `lit_review/paper_summaries/`, mirroring PDF directory structure
 - **BibTeX Key**: Exact key from main.bib in backticks
 
 ### Main Takeaways (max 5 bullets)
-Prioritize empirical findings over theoretical; include specific numbers when significant; be concise but specific.
+Prioritize empirical findings over theoretical; include specific numbers when significant; be concise but specific. Focus on relevance to computational social science research questions.
 
 Good: "ChatGPT achieved 85% accuracy on consumer health questions but only 54% on clinical questions."
 Avoid: "The paper found interesting results about AI in healthcare." (too vague)

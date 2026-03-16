@@ -1,25 +1,74 @@
-# Academic Writing Style Reference
+# Writing Style Reference
 
-## LaTeX Section Structure
+## Target Venue
 
-```latex
-\section*{Section Title}
-\label{sec:concise_name}
+PNAS (Proceedings of the National Academy of Sciences)
 
-Opening paragraph establishing the section's focus and core claim~\cite{Key1}.
+## Audience
 
-Development paragraphs expand on specific points with supporting evidence~\cite{Key2,Key3}.
+Broad scientific community — not just domain specialists. Define all acronyms on first use. Avoid excessive jargon; when technical terms are necessary, briefly explain them.
 
-Concluding paragraph synthesizes and transitions to next section.
-```
+## Article Type
 
-## Citation Format (natbib)
+**Research Article** — original empirical work. Not a Perspective, Commentary, or Review.
 
-| Type          | Syntax              | Output            |
-| ------------- | ------------------- | ----------------- |
-| Parenthetical | `~\cite{Key}`       | [1]               |
-| Narrative     | `\citet{Key}`       | Author et al. [1] |
-| Multiple      | `~\cite{Key1,Key2}` | [1,2]             |
+## Standard Section Structure
+
+1. **Title** — concise, informative, accessible to non-specialists
+2. **Significance Statement** (≤120 words, required) — non-technical; written for a general scientific audience; conveys why this work matters to someone outside your field
+3. **Abstract** (≤250 words) — summarizes purpose, methods, findings, and implications
+4. **Introduction** — 3–5 paragraphs; contextualize for broad audience; end with a clear statement of the contribution and paper structure
+5. **Results** — empirical findings; use subheadings; present findings before interpretation; name figures/tables inline
+6. **Discussion** — open with main finding; situate relative to prior work; address limitations; close with broader implications
+7. **Materials and Methods** — reproducibility-focused; detail computational methods, data sources, and code availability
+8. **Acknowledgments / Data Availability**
+
+## Length
+
+~6 pages (~5,000–6,500 words including references)
+
+## Tone and Voice
+
+- Precise, direct, and accessible
+- Active voice preferred
+- Minimize hedging where evidence is strong; hedge appropriately where it is not
+- Avoid unnecessary qualifiers and filler phrases
+
+## Section-Specific Guidance
+
+### Significance Statement
+
+- Written for a non-specialist reader
+- Conveys "why does this matter to someone outside your field?"
+- No citations; no jargon without explanation
+- ≤120 words
+
+### Introduction
+
+- 3–5 paragraphs
+- Open by contextualizing the broader problem for a general scientific audience
+- Summarize relevant prior work concisely
+- End with a clear statement of the contribution and an overview of the paper structure
+
+### Results
+
+- Present findings objectively; defer interpretation to Discussion
+- Use descriptive subheadings
+- Reference figures and tables inline (e.g., "Fig. 1A shows...")
+- Report effect sizes, confidence intervals, and significance levels as appropriate
+
+### Discussion
+
+- Open with the main finding restated in plain language
+- Situate findings relative to prior literature
+- Address limitations honestly
+- Close with broader implications for the field or society
+
+### Materials and Methods
+
+- Sufficient detail to allow independent reproduction
+- Specify software, packages, and versions
+- Include data availability and code availability statements
 
 ### Rules
 
@@ -41,20 +90,6 @@ Use hedged language unless causal relationships are clearly established.
 | "causes"            | "is often associated with" |
 | "shows"             | "indicates"                |
 | "is" (strong claim) | "appears to be"            |
-
-## Paragraph Guidelines
-
-- **Topic sentence:** Connect to section's core claim
-- **Development:** 3-5 sentences expanding with evidence
-- **Citations:** 1-2 per paragraph typical; avoid 5+ unless surveying literature
-- **Transitions:** Final sentence should bridge to next paragraph
-
-## Voice and Tone
-
-- Clear, direct sentences
-- Active voice preferred: "AI systems reshape..." not "Health information is reshaped by AI systems..."
-- Appropriate formality for target venue
-- Avoid jargon unless audience expects it
 
 ## Common Patterns
 

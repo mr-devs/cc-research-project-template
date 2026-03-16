@@ -69,25 +69,60 @@
 ## Example
 
 ```markdown
-# AI and the Health Information Journey
+# Partisan Asymmetries in Online Misinformation Sharing: Evidence from a Large-Scale Observational Study
 
-**Target venue:** Nature Medicine (Perspective)
-**Length constraints:** 3000 words
+**Target venue:** PNAS Research Article
+**Length constraints:** ~6 pages (~5,500 words)
 
 ---
 
-## The AI-Transformed Health Information Ecosystem
+## Introduction
 
 **Core claim:**
-Generative AI has reconfigured how health information is produced, distributed, interpreted, and acted upon.
+Despite growing concern about misinformation, the relationship between political identity and susceptibility to sharing low-credibility content remains empirically contested.
 
 ### Key dynamics / points
 
-- Shift from retrieval to mediation
-  - FernandezPichel2025Evaluating - LLMs now synthesize rather than just retrieve
-  - Hopkins2023AIChatbots - Paradigm shift in cancer patient information access
-- From episodic to continuous interaction
-  - Wardle2025Evolving - Blurs boundaries between care stages
-- Authority becoming distributed
-  - Sun2024TrustingSearch - Trust dynamics shifting to AI intermediaries
+- Prior work has produced conflicting estimates of partisan asymmetry
+  - Guess2019LessMainstream - Survey evidence suggesting limited asymmetry in news consumption
+  - Grinberg2019FakeNews - Twitter data showing concentrated sharing among a small subset of users
+- Gap between lab-based and observational evidence
+  - Pennycook2021Shifting - Attention-based interventions reduce sharing intentions in experiments
+- Contribution: large-scale behavioral data linking sharing behavior to credibility ratings
+  - Benkler2018NetworkPropaganda - Structural asymmetry argument requiring behavioral test
+
+## Results
+
+**Core claim:**
+Users sharing low-credibility URLs are concentrated on the political right, but the effect is driven by a small, highly active subset of accounts.
+
+### Key dynamics / points
+
+- Distribution of low-credibility sharing is heavily right-skewed
+- Partisan gap persists after controlling for account age and follower count
+  - Vosoughi2018SpreadTrue - Falsehoods spread faster; baseline comparison needed
+- Bot activity does not account for the observed asymmetry
+
+## Discussion
+
+**Core claim:**
+Findings support a structurally asymmetric but narrowly concentrated pattern of misinformation sharing with implications for platform intervention design.
+
+### Key dynamics / points
+
+- Consistency with network propaganda hypothesis
+- Limitations: platform-specific, cross-sectional design
+- Implications for targeted versus broad interventions
+
+## Materials and Methods
+
+**Core claim:**
+Observational design using a matched sample of Twitter users with credibility ratings from independent fact-checkers.
+
+### Key dynamics / points
+
+- Data source and collection window
+- Credibility rating methodology
+  - Pennycook2019LazyNot - Reliance on intuition vs. analytical thinking as confound
+- Statistical modeling approach
 ```
