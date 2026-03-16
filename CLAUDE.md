@@ -157,4 +157,9 @@ uv sync
 
 # Install a local package in editable mode (e.g., the toolkit/)
 uv pip install -e .
+
+# Run a Python script
+uv run python <script.py>
 ```
+
+Always use `uv run python` instead of `python` or `python3` to ensure the correct virtual environment is used.

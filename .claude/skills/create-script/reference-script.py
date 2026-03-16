@@ -9,8 +9,7 @@ Purpose:
 
 Notes:
     [Include details about how the script works, assumptions/decisions made so that
-    independent reviewers can understand how analyses were done. Remove this section
-    if there are no notable implementation details or assumptions to document.]
+    independent reviewers can understand how analyses were done.]
 
 Input:
     - [List input files, command-line flags, data sources, etc.]

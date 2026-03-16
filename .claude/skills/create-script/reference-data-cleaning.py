@@ -40,6 +40,7 @@ Author: Matthew DeVerna
 
 # Standard library imports are included first
 import argparse
+import json  # noqa: F401 — used in the optional JSONL-reading block below
 import logging
 import os
 import uuid
