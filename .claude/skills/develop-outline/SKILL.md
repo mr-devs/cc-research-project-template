@@ -47,11 +47,21 @@ Skip questions already answered in $ARGUMENTS. Record venue and length for the o
 
 ## Step 3: Document Leverage (Optional)
 
-Ask: **"Would you like me to include citation pointers from the paper summaries and bibliography?"**
+### Step 3a — Citation Pointers (for literature sections)
+
+Ask: **"Would you like me to include citation pointers from the paper summaries and bibliography for Introduction and Discussion sections?"**
 
 **If yes:** Scan `lit_review/paper_summaries/` and `paper/main.bib`. Suggest citations as you develop each section using format: `AuthorYearKey - [relevance note]`
 
 **If no:** Proceed without citations.
+
+### Step 3b — Artifact Pointers (for artifact sections)
+
+Ask: **"Would you like to link code files, reports, or data artifacts to Results and Methods sections?"**
+
+**If yes:** For each Results/Methods section during Step 5 development, prompt: "What files (reports, scripts, data) should I reference when writing this section? Use format: `[artifact: path - description]`"
+
+**If no:** Proceed without artifact pointers (user can add them later).
 
 ---
 

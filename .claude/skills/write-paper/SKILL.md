@@ -58,13 +58,32 @@ Extract from `paper/outline.md`:
 
 ---
 
-## Step 5: Load Paper Summaries
+## Step 5: Load Section Context
 
-For each citation key in the section:
+Classify the current section:
+- **literature**: Introduction, Related Work, Background, Discussion
+- **artifact**: Results, Materials and Methods
+- **other**: Abstract, Conclusion, Significance Statement
 
-- Check `lit_review/paper_summaries/**/{Key}.md`
-- If found: use for context
-- If not: use BibTeX metadata only
+### For `literature` sections:
+- Extract citation keys (`AuthorYearKey` entries) from the outline section
+- For each key: check `lit_review/paper_summaries/**/{Key}.md`; if found, load for context; if not, use BibTeX metadata only
+- For Discussion specifically: `main.tex` (loaded in Step 4) contains previously written sections — reference this already-written content when discussing results; do NOT load artifact files
+
+### For `artifact` sections:
+- Extract `[artifact: path - description]` entries from the outline section
+- **If artifact pointers found:** Read each referenced file; use content as primary context for writing
+- **If NO artifact pointers found:** Use `AskUserQuestion`:
+  > "The [Section Name] section has no artifact pointers in the outline. To write this section accurately, I need your actual results or methods details. Please:
+  > 1. Provide file paths to relevant reports, scripts, or data files (e.g., `results/reports/stats.txt`, `code/analysis/model.py`)
+  > 2. Paste relevant content directly into the chat
+  > 3. Type 'write anyway' to proceed with outline guidance only (accuracy not guaranteed)"
+  - If option 1: read the provided files and use as context
+  - If option 2: use pasted content as context
+  - If option 3: proceed with outline only; add a warning comment `% NOTE: written without artifact context — verify accuracy` at the section start
+
+### For `other` sections:
+- No special loading; use outline content only
 
 ---
 

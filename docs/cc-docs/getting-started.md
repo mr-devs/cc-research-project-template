@@ -59,7 +59,7 @@ The following steps take you from raw PDF files to a compiled LaTeX manuscript:
 3. **Build the bibliography**: `/create-bibtex lit_review/papers/` — Fetches BibTeX entries for each PDF (via DOI or title) and appends them to `paper/main.bib`.
 4. **Summarize papers**: `/create-paper-summary lit_review/papers/` — Generates structured markdown summaries for each paper and saves them to `lit_review/paper_summaries/`.
 5. **Develop the outline**: `/develop-outline` — Walks through an interactive conversation to build or refine `paper/outline.md`, optionally pulling in citation pointers from your summaries.
-6. **Write the paper**: `/write-paper` — Drafts LaTeX sections from the outline and saves them to `paper/main.tex`, one section at a time with your review between each. (**Note**: The writing style will be based on `.claude/reference/writing-style.md` (high-level PNAS guidance) and `.claude/reference/latex-rules.md` (LaTeX formatting rules).)
+6. **Write the paper**: `/write-paper` — Drafts LaTeX sections from the outline. For Introduction and Discussion, uses paper summaries for citation context. For Results and Methods, reads the artifact files listed in the outline (reports, scripts, data); if none are listed, prompts you to provide them. Presents each draft for your review before saving to `paper/main.tex`. (**Note**: The writing style will be based on `.claude/reference/writing-style.md` (high-level PNAS guidance) and `.claude/reference/latex-rules.md` (LaTeX formatting rules).)
 
 
 

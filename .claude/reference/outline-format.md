@@ -66,6 +66,19 @@
 - Nested under the point they support
 - Keys must match entries in `paper/main.bib`
 
+### Artifact Pointers (Optional)
+
+For Results and Methods sections, link to project files that ground the writing in actual outputs:
+
+- Format: `[artifact: path/to/file - brief description]`
+- Nested under the point they support
+- Paths relative to project root
+
+Example:
+- Distribution of low-credibility sharing is heavily right-skewed
+  - [artifact: results/reports/sharing_stats.txt - descriptive statistics]
+  - [artifact: code/analysis/distribution_analysis.py - analysis code]
+
 ## Example
 
 ```markdown
@@ -99,8 +112,11 @@ Users sharing low-credibility URLs are concentrated on the political right, but 
 ### Key dynamics / points
 
 - Distribution of low-credibility sharing is heavily right-skewed
+  - [artifact: results/reports/sharing_stats.txt - descriptive statistics on sharing distribution]
+  - [artifact: code/analysis/distribution_analysis.py - analysis code]
 - Partisan gap persists after controlling for account age and follower count
   - Vosoughi2018SpreadTrue - Falsehoods spread faster; baseline comparison needed
+  - [artifact: results/reports/regression_results.txt - regression table]
 - Bot activity does not account for the observed asymmetry
 
 ## Discussion
@@ -122,7 +138,10 @@ Observational design using a matched sample of Twitter users with credibility ra
 ### Key dynamics / points
 
 - Data source and collection window
+  - [artifact: code/data_collection/collect_tweets.py - data collection script]
+  - [artifact: data/processed/user_sample.csv - final matched sample]
 - Credibility rating methodology
   - Pennycook2019LazyNot - Reliance on intuition vs. analytical thinking as confound
 - Statistical modeling approach
+  - [artifact: code/analysis/model.py - statistical modeling code]
 ```
