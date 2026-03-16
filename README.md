@@ -12,4 +12,6 @@ See the `.claude/command/` and `.claude/reference/` directories for the function
 - `data/`: Data files organized by processing stage (raw, interim, processed, external)
 - `results/`: Output files generated from analysis (tables and figures)
 - `workflow/`: Snakemake workflow files for data collection and analysis pipelines
+- `lit_review/`: PDF papers and AI-generated summaries for the literature review phase
+- `paper/`: LaTeX manuscript files (outline, bibliography, and main document)
 - `CLAUDE.md`: Claude Code-specific instructions and context
