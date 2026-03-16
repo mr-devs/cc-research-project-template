@@ -17,11 +17,12 @@ If nothing is included in the "Directories" section below, then you should use t
    - **Reference README**: @.claude/reference/reference-readme.md
 2. Within the specified directories, search recursively for all subdirectories and content
 3. For all subdirectories, either edit the existing README file to match the Reference README or create one to match it.
-4. Edits should be made for the following reasons:
+4. When writing paths to files or directories, make them clickable on GitHub by using a relative Markdown link. For example, write [`script.py`](script.py) instead of just `script.py`, and [`subdir/`](subdir/) instead of just `subdir/`.
+5. Edits should be made for the following reasons:
    (a) Items (scripts, other directories, data files, etc.) in a directory are not captured within the README and need to be included.
    (b) The descriptions in the README are no longer accurate. Check the items if you are unsure.
-5. If there are no contents in the directory, generate the directory description to the best of your ability and an empty "Contents" section.
-6. If you are unsure about something, ask the user questions to clarify.
+6. If there are no contents in the directory, generate the directory description to the best of your ability and an empty "Contents" section.
+7. If you are unsure about something, ask the user questions to clarify.
 
 ## Directories
 

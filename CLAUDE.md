@@ -82,6 +82,8 @@ def calculate_demographic_shift(df, baseline_year, target_year):
 Every directory _must_ contain a `README.md` file that lists the purpose of the directory and contents.
 It should be updated whenever the contents change.
 
+When writing paths to files or directories in a README, make them clickable on GitHub by using a relative Markdown link. For example, write [`script.py`](script.py) instead of just `script.py`, and [`subdir/`](subdir/) instead of just `subdir/`.
+
 See @.claude/reference/reference-readme.md and use it as the canonical example for structure and tone.
 
 ## 3  Project Structure (Template)
