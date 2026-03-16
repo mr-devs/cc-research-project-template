@@ -2,8 +2,7 @@
 
 A research project repository template, built for Claude Code.
 Custom Claude code functions are included with reference files to streamline research workflows.
-For example, a `/create-script` function is intended to create a Python script that follows structural best practices outlines in a reference script.
-See the `.claude/command/` and `.claude/reference/` directories for the functions and reference files, respectively.
+See the `docs/cc-docs/getting-started.md` file for an overview of the approach to how Claude Code is leveraged.
 
 ## Contents
 
