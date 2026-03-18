@@ -94,7 +94,7 @@ Your goal is to create a new Python script that follows the project's coding sta
 ## Best Practices Checklist
 
 - [ ] Script header docstring is complete (Purpose, Notes, Input, Output, Author)
-- [ ] Imports organized (standard → third-party → local)
+- [ ] Imports organized (standard → third-party → local) and then in alphabetical order
 - [ ] Constants defined in UPPERCASE
 - [ ] All functions have NumPy/Pandas style docstrings
 - [ ] `os.chdir(Path(__file__).resolve().parent)` included
