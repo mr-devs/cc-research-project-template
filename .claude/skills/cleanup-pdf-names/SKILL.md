@@ -2,7 +2,7 @@
 name: cleanup-pdf-names
 description: Clean up PDF filenames by removing spaces, em dashes, and special characters
 argument-hint: <path/to/directory>
-disable-model-invocation: true
+disable-model-invocation: false
 ---
 
 # Cleanup PDF Names Command

@@ -2,7 +2,7 @@
 name: create-bibtex
 description: Create BibTeX entries from PDF papers and add to main.bib
 argument-hint: <path/to/pdf-or-directory>
-disable-model-invocation: true
+disable-model-invocation: false
 ---
 
 # Create BibTeX Entry Command
