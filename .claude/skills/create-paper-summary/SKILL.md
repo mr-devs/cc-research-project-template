@@ -22,7 +22,7 @@ $ARGUMENTS
 
 ### Step 1: Determine Target Path
 
-**If $ARGUMENTS empty:** Ask user for path (e.g., `lit_review/papers/00-background/file.pdf` or `lit_review/papers/`).
+**If $ARGUMENTS empty:** Ask user for path that contains the PDFs(e.g., `lit_review/papers/`).
 
 **If $ARGUMENTS provided:** Use path; resolve relative paths from project root.
 
@@ -38,45 +38,22 @@ Build list with full path and relative subdirectory. Report count; if zero, info
 
 ---
 
-### Step 3: Load Existing BibTeX Entries
+### Step 3: Build Work List
 
-1. Read `paper/main.bib`
-2. Create lookup with normalized author+year → full entry data (key, title, authors, venue, year, DOI)
-
-Report count of existing entries.
-
----
-
-### Step 4: Verify BibTeX Entries Exist
-
-For each PDF:
-
-#### 4a. Parse Filename
-Extract first author surname (normalized) and year from filename.
-
-#### 4b. Find Match
-Search main.bib for entry where normalized author+year matches.
-
-#### 4c. Handle Missing
-**If NO match:** Report "No BibTeX entry found for: {filename}". Run create-bibtex logic for this PDF (see create-bibtex.md Steps 5-6), reload main.bib, record new key.
-
-**If match found:** Record BibTeX key.
+1. Read `paper/main.bib`; create lookup with normalized author+year → full entry data (key, title, authors, venue, year, DOI). Report count of existing entries.
+2. For each PDF:
+   - Parse filename → first author surname (normalized) and year
+   - Search main.bib for matching entry; if missing, use the `fetchbib` skill to create one, then reload main.bib. Record BibTeX key.
+   - Check if `lit_review/paper_summaries/{subdirectory}/{BibTeXKey}.md` already exists → mark as **skip** or **process**
+3. Report counts: to process, skipped (summary exists), BibTeX entries created.
 
 ---
 
-### Step 5: Check for Existing Summaries
+### Step 4: Create Summaries
 
-For each PDF:
-1. Expected path: `lit_review/paper_summaries/{subdirectory}/{BibTeXKey}.md`
-2. If exists → skip ("Summary already exists"); if not → process
+For each PDF marked **process**:
 
-Report counts: skipped, to process, BibTeX entries created in Step 4.
-
----
-
-### Step 6: Create Summary for Each PDF
-
-#### 6a. Extract PDF Content (Token-Efficient)
+#### 4a. Extract PDF Content (Token-Efficient)
 
 Use the pdf-extraction skill strategically:
 
@@ -112,17 +89,15 @@ Use the pdf-extraction skill strategically:
 
 **Never extract the full PDF for papers >8 pages.** Target specific sections.
 
-Identify sections: Abstract, Introduction, Methods, Results, Discussion, Limitations, Conclusion.
-
-#### 6b. Extract Metadata from BibTeX
+#### 4b. Extract Metadata from BibTeX
 From matching entry: Authors (comma-separated), Title, Year, Publication venue, DOI, BibTeX Key.
 
-#### 6c. Generate Summary Sections
+#### 4c. Generate Summary Sections
 
 Per @.claude/reference/summary-format.md:
 
 **Main Takeaways (max 5 bullets):**
-- Focus on LLM/health relevance
+- Focus on the paper's core contributions and findings
 - Prioritize empirical over theoretical
 - Include significant statistics
 - Be concise but specific
@@ -135,41 +110,20 @@ Per @.claude/reference/summary-format.md:
 
 **Limitations (max 4 bullets):**
 - Check paper's limitations section first
-- Sample size constraints
-- Generalizability issues
-- Temporal limitations
+- Common types: sample size constraints, generalizability issues, temporal limitations, methodological trade-offs
 
-#### 6d. Format Summary
-Use template from @.claude/reference/summary-format.md.
-
----
-
-### Step 7: Create Output Directory
-
-For each summary:
-1. Target: `lit_review/paper_summaries/{subdirectory}/`
-2. Create subdirectory if needed
-3. Full path: `lit_review/paper_summaries/{subdirectory}/{BibTeXKey}.md`
-
-| Source PDF | Summary |
-|------------|---------|
-| `lit_review/papers/00-background/Biswas - 2023 - Role.pdf` | `lit_review/paper_summaries/00-background/Biswas2023Role.md` |
-
----
-
-### Step 8: Write Summary Files
-
-For each summary:
-1. Write formatted markdown (UTF-8)
-2. Verify created successfully
-3. **After every 5 summaries**, run:
+#### 4d. Write Summary File
+1. Create output directory if needed: `lit_review/paper_summaries/{subdirectory}/`
+2. Write formatted markdown to `lit_review/paper_summaries/{subdirectory}/{BibTeXKey}.md` using the template from @.claude/reference/summary-format.md
+3. Verify file created successfully
+4. **After every 5 summaries**, run:
    ```
    /compact Compacting after 5 paper summaries. PRESERVE: (1) Task: creating paper summaries using /create-paper-summary command, (2) papers processed with output paths, (3) papers remaining to process, (4) any warnings/errors, (5) BibTeX state. DISCARD: All extracted PDF text content. Replace PDF extractions with: "Summarized: [filename] → [output_path]".
    ```
 
 ---
 
-### Step 9: Report Results
+### Step 5: Report Results
 
 ```
 Paper Summary Creation Summary
@@ -205,7 +159,7 @@ If no URL either, just `- **DOI:** Not available`.
 If paper lacks distinct sections: describe general approach for methodology; note "Not explicitly discussed" for limitations and infer obvious ones.
 
 ### Non-Research Papers (Reports, White Papers)
-Adapt headers: "Key Findings" → Main Takeaways; "Approach" → Methodology; "Caveats" → Limitations.
+Highlight that this work has not been peer-reviewed. Consider this fact when summarizing main takeaways and limitations.
 
 ### Review Papers
 Main takeaways = synthesis findings; Methodology = review protocol; Limitations = gaps in reviewed literature.
