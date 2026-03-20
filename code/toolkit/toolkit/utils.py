@@ -49,7 +49,7 @@ def setup_logging(
             "either console_output=True or provide log_file path"
         )
 
-    logger = logging.getLogger(__name__)
+    logger = logging.getLogger()
     logger.setLevel(getattr(logging, log_level.upper()))
 
     # Clear existing handlers to avoid duplicates
