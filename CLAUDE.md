@@ -55,6 +55,8 @@ Convenience utility functions are saved here.
 
 ### 2.3  Function Docstrings (Pandas / NumPy style)
 
+Wrap docstrings at 100 characters.
+
 ```python
 def calculate_demographic_shift(df, baseline_year, target_year):
     """
