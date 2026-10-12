@@ -85,8 +85,10 @@ The following steps take you from raw PDF files to a compiled LaTeX manuscript:
      - [`.claude/reference/writing-style.md`](../../.claude/reference/writing-style.md) — sentence-level style, derived from [Gopen & Swan, 1990](https://www.usenix.org/sites/default/files/gopen_and_swan_science_of_scientific_writing.pdf)
      - [`.claude/reference/latex-rules.md`](../../.claude/reference/latex-rules.md) — LaTeX formatting rules
 
+7. **Review before submission**: Run the review skills (`/top3-reviewer`, `/statistical-reviewer`, `/review-paper-code`, `/abstract-checker`, `/bibliography-checker`, `/structural-editor`, `/writing-editor`) to audit the draft from different angles. See [Paper Writing](paper-writing.md#reviewing-and-revising-the-manuscript) for what each one covers.
+
 ## Where to Go Next
 
 - [Repository & Code Management](repository-and-code-management.md) — Skills for creating scripts, maintaining READMEs, and managing your Python environment.
 - [Literature Review](literature-review.md) — Skills for the full PDF → bibliography → summary workflow.
-- [Paper Writing](paper-writing.md) — Skills for building outlines and writing LaTeX sections.
+- [Paper Writing](paper-writing.md) — Skills for building outlines, writing LaTeX sections, and reviewing the finished draft.
